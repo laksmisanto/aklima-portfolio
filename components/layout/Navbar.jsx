@@ -8,7 +8,7 @@ import { useTheme } from '@/hooks/useTheme'
 import { NAV_LINKS } from '@/constants/navigation'
 import { scrollToSection } from '@/lib/utils'
 import siteConfig from '@/config/site'
-import { Moon, Sun } from 'lucide-react'
+import { Moon, Sun, Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const scrollY = useScrollPosition()
@@ -61,7 +61,7 @@ export default function Navbar() {
             aria-label="Toggle theme"
             className="w-9 h-9 rounded-lg border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:border-[var(--color-border-strong)] transition-all duration-200"
           >
-            {theme === 'dark' ? <Sun /> : <Moon />}
+            {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
           </button>
           <button
             onClick={() => scrollToSection('#contact')}
@@ -77,7 +77,7 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
-          <i className={`ti ${menuOpen ? 'ti-x' : 'ti-menu-2'} text-xl`} aria-hidden="true" />
+          {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </nav>
 

@@ -4,7 +4,7 @@ export const PROJECTS = [
     title: 'E-commerce platform',
     description:
       'Full stack e-commerce app with product catalog, cart, Stripe payments, and admin panel. Handles 500+ products.',
-    image: '/images/projects/project-1.png',
+    image: 'https://picsum.photos/id/20/200/300',
     techStack: ['Next.js', 'MongoDB', 'Express', 'Tailwind'],
     category: 'fullstack',
     liveUrl: 'https://your-live-url.com',
@@ -17,7 +17,7 @@ export const PROJECTS = [
     title: 'Analytics dashboard',
     description:
       'Real-time admin dashboard with charts, user management, RBAC, and JWT authentication for SaaS teams.',
-    image: '/images/projects/project-2.png',
+    image: 'https://picsum.photos/id/38/200/300',
     techStack: ['React', 'Node.js', 'MongoDB', 'JWT'],
     category: 'dashboard',
     liveUrl: 'https://your-live-url.com',
@@ -30,7 +30,7 @@ export const PROJECTS = [
     title: 'Developer portfolio',
     description:
       'Modern developer portfolio with MDX blog, Framer Motion animations, dark mode, and 95+ Lighthouse score.',
-    image: '/images/projects/project-3.png',
+    image: 'https://picsum.photos/id/36/200/300',
     techStack: ['Next.js', 'MDX', 'Motion', 'Vercel'],
     category: 'nextjs',
     liveUrl: 'https://your-live-url.com',
@@ -43,7 +43,7 @@ export const PROJECTS = [
     title: 'Task management app',
     description:
       'Collaborative task manager with drag-and-drop boards, real-time updates via Socket.io, and team workspaces.',
-    image: '/images/projects/project-4.png',
+    image: 'https://picsum.photos/id/48/200/300',
     techStack: ['React', 'Express', 'Socket.io', 'MongoDB'],
     category: 'fullstack',
     liveUrl: 'https://your-live-url.com',
@@ -54,8 +54,8 @@ export const PROJECTS = [
 ]
 
 export const PROJECT_FILTERS = [
-  { label: 'All',        value: 'all'       },
+  { label: 'All', value: 'all' },
   { label: 'Full stack', value: 'fullstack' },
-  { label: 'Next.js',    value: 'nextjs'    },
-  { label: 'Dashboard',  value: 'dashboard' },
+  { label: 'Next.js', value: 'nextjs' },
+  { label: 'Dashboard', value: 'dashboard' },
 ]

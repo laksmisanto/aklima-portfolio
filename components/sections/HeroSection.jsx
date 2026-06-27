@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'motion/react'
+import { Briefcase, Send } from 'lucide-react'
 import AvailabilityBadge from '@/components/ui/AvailabilityBadge'
 import SocialLinks from '@/components/ui/SocialLinks'
 import Button from '@/components/ui/Button'
@@ -58,7 +59,7 @@ export default function HeroSection() {
                 variant="primary"
                 size="md"
                 onClick={() => scrollToSection('#projects')}
-                icon={<i className="ti ti-briefcase text-sm" aria-hidden="true" />}
+                icon={<Briefcase size={16} />}
               >
                 View my work
               </Button>
@@ -66,7 +67,7 @@ export default function HeroSection() {
                 variant="secondary"
                 size="md"
                 onClick={() => scrollToSection('#contact')}
-                icon={<i className="ti ti-send text-sm" aria-hidden="true" />}
+                icon={<Send size={16} />}
               >
                 Hire me
               </Button>

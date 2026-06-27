@@ -1,3 +1,4 @@
+import { Download } from 'lucide-react'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 import SectionHeader from '@/components/ui/SectionHeader'
 import Button from '@/components/ui/Button'
@@ -32,7 +33,7 @@ export default function AboutSection() {
               variant="ghost"
               size="md"
               href="/aklima-cv.pdf"
-              icon={<i className="ti ti-download text-sm" aria-hidden="true" />}
+              icon={<Download size={16} />}
             >
               Download CV
             </Button>

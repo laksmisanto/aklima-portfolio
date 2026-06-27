@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import { SiGithub } from 'react-icons/si'
+import { ExternalLink } from 'lucide-react'
 import TechBadge from './TechBadge'
 import Button from './Button'
 
@@ -23,20 +24,15 @@ export default function ProjectCard({
           : 'border-[var(--color-border)] hover:border-violet-300 dark:hover:border-violet-700'
       }`}
     >
-      <div className="relative h-44 overflow-hidden bg-violet-50 dark:bg-violet-950 flex items-center justify-center">
+      <div className="relative h-80 overflow-hidden bg-violet-50 dark:bg-violet-950 flex items-center justify-center">
         {image ? (
-          <Image
+          <img
             src={image}
             alt={title}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{ backgroundColor: accentColor }}
-          />
+          <div className="absolute inset-0 opacity-10" style={{ backgroundColor: accentColor }} />
         )}
       </div>
 
@@ -51,26 +47,18 @@ export default function ProjectCard({
             <TechBadge
               key={tech}
               label={tech}
-              variant={['Next.js', 'React', 'MongoDB', 'Node.js'].includes(tech) ? 'primary' : 'neutral'}
+              variant={
+                ['Next.js', 'React', 'MongoDB', 'Node.js'].includes(tech) ? 'primary' : 'neutral'
+              }
             />
           ))}
         </div>
 
         <div className="flex gap-2">
-          <Button
-            variant="primary"
-            size="sm"
-            href={liveUrl}
-            icon={<i className="ti ti-external-link text-xs" aria-hidden="true" />}
-          >
+          <Button variant="primary" size="sm" href={liveUrl} icon={<ExternalLink size={12} />}>
             Live demo
           </Button>
-          <Button
-            variant="secondary"
-            size="sm"
-            href={githubUrl}
-            icon={<i className="ti ti-brand-github text-xs" aria-hidden="true" />}
-          >
+          <Button variant="secondary" size="sm" href={githubUrl} icon={<SiGithub size={12} />}>
             GitHub
           </Button>
         </div>

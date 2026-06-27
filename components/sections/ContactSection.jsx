@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'motion/react'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import Button from '@/components/ui/Button'
 import SocialLinks from '@/components/ui/SocialLinks'
@@ -9,9 +10,9 @@ import { fadeUp, slideInLeft, slideInRight, viewportConfig } from '@/lib/animati
 import siteConfig from '@/config/site'
 
 const CONTACT_ITEMS = [
-  { icon: 'ti-mail',    label: 'Email',    value: siteConfig.email    },
-  { icon: 'ti-phone',   label: 'Phone',    value: siteConfig.phone    },
-  { icon: 'ti-map-pin', label: 'Location', value: siteConfig.location },
+  { icon: Mail,    label: 'Email',    value: siteConfig.email    },
+  { icon: Phone,   label: 'Phone',    value: siteConfig.phone    },
+  { icon: MapPin,  label: 'Location', value: siteConfig.location },
 ]
 
 export default function ContactSection() {
@@ -33,10 +34,10 @@ export default function ContactSection() {
             </p>
 
             <div className="flex flex-col gap-4 mb-8">
-              {CONTACT_ITEMS.map(({ icon, label, value }) => (
+              {CONTACT_ITEMS.map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-lg bg-violet-50 dark:bg-violet-950 border border-violet-100 dark:border-violet-900 flex items-center justify-center flex-shrink-0">
-                    <i className={`ti ${icon} text-sm text-violet-600 dark:text-violet-400`} aria-hidden="true" />
+                    <Icon size={16} className="text-violet-600 dark:text-violet-400" />
                   </div>
                   <div>
                     <p className="text-xs text-[var(--color-text-faint)]">{label}</p>
@@ -117,7 +118,7 @@ export default function ContactSection() {
                 variant="primary"
                 size="md"
                 loading={status === 'loading'}
-                icon={<i className="ti ti-send text-sm" aria-hidden="true" />}
+                icon={<Send size={16} />}
                 className="w-full justify-center"
               >
                 {status === 'loading' ? 'Sending…' : 'Send message'}

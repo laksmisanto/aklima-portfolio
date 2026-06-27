@@ -1,40 +1,46 @@
+import {
+  SiHtml5, SiCss, SiJavascript, SiReact, SiNextdotjs, SiTailwindcss, SiFramer,
+  SiNodedotjs, SiExpress, SiMongodb, SiGit, SiGithub, SiVscodium, SiPostman, SiVercel,
+} from 'react-icons/si'
+import { Globe, Lock, Database } from 'lucide-react'
+
 export const SKILL_GROUPS = [
   {
     label: 'Frontend',
     skills: [
-      { name: 'HTML5',      icon: 'ti-brand-html5'      },
-      { name: 'CSS3',       icon: 'ti-brand-css3'       },
-      { name: 'JavaScript', icon: 'ti-brand-javascript' },
-      { name: 'React',      icon: 'ti-brand-react'      },
-      { name: 'Next.js',    icon: 'ti-brand-nextjs'     },
-      { name: 'Tailwind',   icon: 'ti-wind'             },
-      { name: 'Motion',     icon: 'ti-player-play'      },
+      { name: 'HTML5',      icon: SiHtml5       },
+      { name: 'CSS3',       icon: SiCss         },
+      { name: 'JavaScript', icon: SiJavascript  },
+      { name: 'React',      icon: SiReact       },
+      { name: 'Next.js',    icon: SiNextdotjs   },
+      { name: 'Tailwind',   icon: SiTailwindcss },
+      { name: 'Motion',     icon: SiFramer      },
     ],
   },
   {
     label: 'Backend',
     skills: [
-      { name: 'Node.js',    icon: 'ti-brand-nodejs' },
-      { name: 'Express.js', icon: 'ti-server'       },
-      { name: 'REST API',   icon: 'ti-api'          },
-      { name: 'JWT Auth',   icon: 'ti-lock'         },
+      { name: 'Node.js',    icon: SiNodedotjs },
+      { name: 'Express.js', icon: SiExpress   },
+      { name: 'REST API',   icon: Globe       },
+      { name: 'JWT Auth',   icon: Lock        },
     ],
   },
   {
     label: 'Database',
     skills: [
-      { name: 'MongoDB',  icon: 'ti-database' },
-      { name: 'Mongoose', icon: 'ti-box'      },
+      { name: 'MongoDB',  icon: SiMongodb },
+      { name: 'Mongoose', icon: Database  },
     ],
   },
   {
     label: 'Tools',
     skills: [
-      { name: 'Git',      icon: 'ti-brand-git'    },
-      { name: 'GitHub',   icon: 'ti-brand-github' },
-      { name: 'VS Code',  icon: 'ti-code'         },
-      { name: 'Postman',  icon: 'ti-api'          },
-      { name: 'Vercel',   icon: 'ti-brand-vercel' },
+      { name: 'Git',     icon: SiGit              },
+      { name: 'GitHub',  icon: SiGithub           },
+      { name: 'VS Code', icon: SiVscodium         },
+      { name: 'Postman', icon: SiPostman          },
+      { name: 'Vercel',  icon: SiVercel           },
     ],
   },
 ]

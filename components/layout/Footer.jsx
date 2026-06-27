@@ -1,5 +1,8 @@
 'use client'
 
+import { SiGithub } from 'react-icons/si'
+import { FaLinkedin } from 'react-icons/fa6'
+import { ArrowUp } from 'lucide-react'
 import { NAV_LINKS } from '@/constants/navigation'
 import siteConfig from '@/config/site'
 import { scrollToSection } from '@/lib/utils'
@@ -26,9 +29,9 @@ export default function Footer() {
 
         <div className="flex gap-2">
           {[
-            { icon: 'ti-brand-github',   href: siteConfig.socials.github,   label: 'GitHub'   },
-            { icon: 'ti-brand-linkedin', href: siteConfig.socials.linkedin, label: 'LinkedIn' },
-          ].map(({ icon, href, label }) => (
+            { icon: SiGithub,   href: siteConfig.socials.github,   label: 'GitHub'   },
+            { icon: FaLinkedin, href: siteConfig.socials.linkedin, label: 'LinkedIn' },
+          ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}
               href={href}
@@ -37,7 +40,7 @@ export default function Footer() {
               aria-label={label}
               className="w-7 h-7 rounded border border-[var(--color-border)] flex items-center justify-center text-xs text-[var(--color-text-faint)] hover:text-[var(--color-text-muted)] hover:border-[var(--color-border-strong)] transition-all duration-200"
             >
-              <i className={`ti ${icon}`} aria-hidden="true" />
+              <Icon size={12} />
             </a>
           ))}
           <button
@@ -45,7 +48,7 @@ export default function Footer() {
             aria-label="Back to top"
             className="w-7 h-7 rounded bg-violet-50 dark:bg-violet-950 border border-violet-200 dark:border-violet-800 flex items-center justify-center text-xs text-violet-600 dark:text-violet-400 hover:bg-violet-100 transition-all duration-200"
           >
-            <i className="ti ti-arrow-up" aria-hidden="true" />
+            <ArrowUp size={12} />
           </button>
         </div>
       </div>
