@@ -1,0 +1,12 @@
+{
+  "name": "Aklima — Full Stack Developer",
+  "short_name": "Aklima",
+  "description": "Full Stack Developer specializing in Next.js and the MERN stack.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#7C3AED",
+  "icons": [
+    { "src": "/icon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
